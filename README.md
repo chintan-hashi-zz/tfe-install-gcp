@@ -1,10 +1,23 @@
 This Repo can be used to deploy Terraform Enterprise (v5) into your GCP environment in Production Mode. This will first create a VPC, Subnet, GCS Bucket, Postgres Database, Firewalls, and SSL Certificate in your GCP ennvironment before deploying the Application. 
 
 ## Modules Used
+
 - [Official TFE GCP Module](https://github.com/hashicorp/terraform-google-terraform-enterprise)
 - [Customized GCP Bootstrap Module](https://github.com/cneralich/private-terraform-enterprise/tree/master/examples/bootstrap-google) 
 
+## Pre-Requisites
+
+The following items must be configured prior to using this Module:
+
+- A GCP Project
+- Valid GCP Credentials stored in JSON format
+- A valid DNS Zone
+- A valid Domain
+- Enable the servicenetworking.googleapis.com API in your GCP Project
+- Enable the cloudresourcemanager.googleapis.com API in your GCP Project
+
 ## Required Variables
+
 - `credentials_file` -- Path to credential file
 - `domain` -- Domain name
 - `dns_zone` -- Managed DNS Zone name
@@ -15,6 +28,7 @@ This Repo can be used to deploy Terraform Enterprise (v5) into your GCP environm
 - `postgresql_password` -- Password for Postgres Database
 
 ## Optional Variables
+
 - `certificate` -- Path to Certificate file or GCP Certificate link
 - `region` -- GCP Region
 - `public_ip` -- The public IP for the load balancer to use
@@ -24,6 +38,8 @@ This Repo can be used to deploy Terraform Enterprise (v5) into your GCP environm
 - `secondary_count` -- Number of secondary nodes to run
 - `postgresql_machinetype` -- Machine type to use for Postgres Database
 
+
 ## How to Use this Repo
+
 - Update the values in the terraform.tfvars file 
 - Run `terraform plan` and `terraform apply`
