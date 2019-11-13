@@ -23,3 +23,7 @@ This Repo can be used to deploy Terraform Enterprise (v5) into your GCP environm
 - `primary_count` -- Number of primary nodes to run, must be odd number - 3 or 5 recommended
 - `secondary_count` -- Number of secondary nodes to run
 - `postgresql_machinetype` -- Machine type to use for Postgres Database
+
+## How to Use this Repo
+- Update the values in the terraform.tfvars file 
+- Run `terraform plan` and `terraform apply`
