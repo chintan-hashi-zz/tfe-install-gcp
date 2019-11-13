@@ -1,4 +1,4 @@
-credentials_file = "path/to/gcp/credentials/file"
+credentials_file = "path/to/gcp/credentials/file.json"
 
 dns_zone = "dns_zone_in_gcp"
 
