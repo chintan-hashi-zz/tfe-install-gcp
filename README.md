@@ -7,6 +7,9 @@ This Repo can be used to deploy Terraform Enterprise (v5) into your GCP environm
 
 ## Pre-Requisites
 
+Terraform Version
+- This Repo uses Modules that require a Terraform version of <0.12.x.  The recommended Terraform version to use is 0.11.14.
+
 The following items must be configured prior to using this Module:
 
 - A GCP Project
