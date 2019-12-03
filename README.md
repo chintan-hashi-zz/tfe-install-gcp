@@ -18,7 +18,7 @@ The following items must be configured prior to using this Module:
 - A valid Domain
 - Enable the servicenetworking.googleapis.com API in your GCP Project
 - Enable the cloudresourcemanager.googleapis.com API in your GCP Project
-- Enable the storage.googleapis.com API in your GCP Project
+- Enable the storage-api.googleapis.com API in your GCP Project
 
 ## Required Variables
 
