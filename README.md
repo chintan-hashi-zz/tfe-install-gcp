@@ -47,3 +47,7 @@ The following items must be configured prior to using this Module:
 
 - Update the values in the terraform.tfvars file 
 - Run `terraform plan` and `terraform apply`
+
+## Post-Deployment Steps
+- Due to the way GCP firewalls work, the initial setup requires outside access to primary-0. After provisioning is complete, you may remove those rules from the firewall and can access the dashboard by re-enabling them as-needed or using IAP tunnels. 
+- Once the Admin Dashboard has loaded and the Application has successfully started, you'll want to update the value in the 'hostname' field to ensure all URLs (ex. those used for GitHube Webhooks, SAML, etc.) point to the Load Balancer rather than directly to your primary node.  Once this value has been updated, click 'Save' in the dashboard and make sure the Application  is restarted.
