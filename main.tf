@@ -15,6 +15,7 @@ module "bootstrap" {
   creds   = "${var.credentials_file}"
   domain  = "${var.domain}"
   dnszone = "${var.dns_zone}"
+  frontenddns = "${var.frontend_dns}"
 
   postgresql_machinetype = "${var.postgresql_machinetype}"
   postgresql_password = "${var.postgresql_password}"
